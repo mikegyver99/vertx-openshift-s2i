@@ -31,7 +31,7 @@
                 "source": {
                     "type": "Git",
                     "git": {
-                        "uri": "github.com/mikegyver99/vertx-openshift-s2i.git",
+                        "uri": "https://github.com/mikegyver99/vertx-openshift-s2i.git",
                         "ref": "master"
                     }
                 },
