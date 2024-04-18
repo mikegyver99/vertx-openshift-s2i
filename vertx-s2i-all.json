@@ -111,7 +111,7 @@
                 {
                     "description": "Git source URI for application",
                     "name": "GIT_URI",
-                    "value": "github.com/mikegyver99/vertx-openshift-s2i.git"
+                    "value": "https://github.com/mikegyver99/vertx-openshift-s2i.git"
                 },
                 {
                     "description": "Git branch/tag reference",
