@@ -6,7 +6,7 @@ ENV GRADLE_VERSION 4.1
 ENV MAVEN_VERSION 3.9.6
 
 RUN yum install -y --enablerepo=centosplus \
-    tar unzip bc which lsof java-1.8.0-openjdk && \
+    tar unzip bc which lsof java-1.8.0-openjdk java-1.8.0-openjdk-devel && \
     yum clean all -y && \
     (curl -0 http://dlcdn.apache.org/maven/maven-3/${MAVEN_VERSION}/binaries/apache-maven-${MAVEN_VERSION}-bin.tar.gz | \
     tar -zx -C /usr/local) && \
