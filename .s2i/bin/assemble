@@ -191,4 +191,4 @@ else
 fi
 
 # Remove Java Development Kit
-# sudo yum remove -y java-1.8.0-openjdk-devel
+sudo yum remove -y java-1.8.0-openjdk-devel
