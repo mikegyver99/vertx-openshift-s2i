@@ -21,7 +21,8 @@ RUN yum install -y --enablerepo=centosplus \
     mkdir -p /opt/app-root/source && chmod -R a+rwX /opt/app-root/source && \
     mkdir -p /opt/s2i/destination && chmod -R a+rwX /opt/s2i/destination && \
     mkdir -p /opt/app-root/src && chmod -R a+rwX /opt/app-root/src && \
-    mkdir -p /opt/.m2 && chmod -R a+rwX /opt/.m2
+    mkdir -p /opt/.m2 && chmod -R a+rwX /opt/.m2 && \
+    echo "#1001 ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 ENV PATH=/opt/maven/bin/:/opt/gradle/bin/:$PATH M2_LOCAL=/opt/.m2
 
@@ -41,8 +42,6 @@ RUN chmod -R go+rw /opt/openshift
 
 # This default user is created in the openshift/base-centos7 image
 USER 1001
-# add default user to sudo, testing image with openjdk-devel pkg, need sudo to remove.
-RUN echo -n "#1001 ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/1001
 
 # Set the default port for applications HTTP and event bus
 EXPOSE 8080
