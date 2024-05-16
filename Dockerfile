@@ -40,8 +40,7 @@ RUN chown -R 1001:1001 /opt/openshift /opt/.m2
 RUN chmod -R go+rw /opt/openshift
 
 # This default user is created in the openshift/base-centos7 image
-# USER 1001
-USER 0
+USER 1001
 
 # Set the default port for applications HTTP and event bus
 EXPOSE 8080
