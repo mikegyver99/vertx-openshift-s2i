@@ -21,7 +21,7 @@ RUN yum install -y --enablerepo=centosplus \
     mkdir -p /opt/app-root/source && chmod -R a+rwX /opt/app-root/source && \
     mkdir -p /opt/s2i/destination && chmod -R a+rwX /opt/s2i/destination && \
     mkdir -p /opt/app-root/src && chmod -R a+rwX /opt/app-root/src && \
-    mkdir -p /opt/.m2 && chmod -R a+rwX /opt/.m2 && \
+    mkdir -p /opt/.m2 && chmod -R a+rwX /opt/.m2
 
 ENV PATH=/opt/maven/bin/:/opt/gradle/bin/:$PATH M2_LOCAL=/opt/.m2
 
